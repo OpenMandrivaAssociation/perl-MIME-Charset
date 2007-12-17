@@ -16,7 +16,6 @@ Source:         http://www.cpan.org/modules/by-module/MIME/%{module}-%{up_versio
 Buildrequires:  perl-devel
 %endif
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 MIME::Charset provides informations about character sets used for MIME messages
