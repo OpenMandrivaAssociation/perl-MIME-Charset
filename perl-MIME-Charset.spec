@@ -1,8 +1,8 @@
 %define module  MIME-Charset
 %define name    perl-%{module}
-%define version 1.000
+%define version 1.006.1
 %define up_version  0.044
-%define release %mkrel 2
+%define release %mkrel 1
 
 Name:           %{name}
 Version:        %{version}
