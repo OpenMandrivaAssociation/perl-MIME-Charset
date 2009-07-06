@@ -1,29 +1,28 @@
-%define module  MIME-Charset
-%define name    perl-%{module}
-%define version 1.007.1
-%define up_version  0.044
-%define release %mkrel 1
+%define upstream_name    MIME-Charset
+%define upstream_version 1.007.1
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Name:           perl-%{upstream_name}
+Version:        %perl_convert_version %{upstream_version}
+Release:        %mkrel 1
+
 Summary:        Charset Informations for MIME
-License:        GPL or Artistic
+License:        GPL+ or Artistic
 Group:          Development/Perl
-URL:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/MIME/%{module}-%{up_version}.tar.bz2
+URL:            http://search.cpan.org/dist/%{upstream_name}
+Source0:        http://www.cpan.org/modules/by-module/MIME/%{upstream_name}-%{upstream_version}.tar.gz
+
 %if %{mdkversion} < 1010
 Buildrequires:  perl-devel
 %endif
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 MIME::Charset provides informations about character sets used for MIME messages
 on Internet.
 
 %prep
-%setup -q -n %{module}-%{up_version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -41,8 +40,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc COPYING README
+%doc README
 %{perl_vendorlib}/MIME
 %{_mandir}/*/*
-
 
