@@ -3,7 +3,7 @@
 
 Name:           perl-%{upstream_name}
 Version:        %perl_convert_version %{upstream_version}
-Release:        %mkrel 1
+Release:        %mkrel 2
 
 Summary:        Charset Informations for MIME
 License:        GPL+ or Artistic
@@ -25,7 +25,7 @@ on Internet.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+%{__perl} Makefile.PL INSTALLDIRS=vendor < /dev/null
 %make
 
 %check
