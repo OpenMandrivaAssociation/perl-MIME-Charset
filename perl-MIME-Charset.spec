@@ -1,9 +1,9 @@
 %define upstream_name    MIME-Charset
-%define upstream_version 1.008
+%define upstream_version 1.008.1
 
 Name:           perl-%{upstream_name}
 Version:        %perl_convert_version %{upstream_version}
-Release:        %mkrel 2
+Release:        %mkrel 1
 
 Summary:        Charset Informations for MIME
 License:        GPL+ or Artistic
