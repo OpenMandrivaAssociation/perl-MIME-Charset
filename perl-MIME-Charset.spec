@@ -1,5 +1,5 @@
 %define upstream_name    MIME-Charset
-%define upstream_version 1.008.2
+%define upstream_version 1.009.1
 
 Name:           perl-%{upstream_name}
 Version:        %perl_convert_version %{upstream_version}
