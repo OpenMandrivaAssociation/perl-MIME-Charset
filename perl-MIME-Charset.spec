@@ -33,5 +33,6 @@ make test
 %doc README
 %{perl_vendorlib}/MIME
 %{_mandir}/man3/*
+%{_libdir}/perl5/vendor_perl/5.16.3/POD2/JA/MIME/Charset.pod
 
 
