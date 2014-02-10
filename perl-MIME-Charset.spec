@@ -1,5 +1,5 @@
 %define modname	MIME-Charset
-%define modver 1.010.1
+%define modver 1.011.1
 
 Summary:	Charset Informations for MIME
 Name:		perl-%{modname}
@@ -34,5 +34,6 @@ make test
 %{perl_vendorlib}/MIME
 %{_mandir}/man3/*
 %{perl_vendorlib}/POD2/JA/MIME
+
 
 
