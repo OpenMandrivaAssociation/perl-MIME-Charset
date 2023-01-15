@@ -1,14 +1,13 @@
 %define modname	MIME-Charset
-%define modver 1.012.2
 
 Summary:	Charset Informations for MIME
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
+Version:	1.013.1
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/MIME::Charset
-Source0:	http://www.cpan.org/modules/by-module/MIME/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/MIME/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl(CPAN)
@@ -20,17 +19,17 @@ MIME::Charset provides informations about character sets used for MIME messages
 on Internet.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
+perl Makefile.PL INSTALLDIRS=vendor < /dev/null
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor < /dev/null
-%make
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README
