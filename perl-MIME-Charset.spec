@@ -3,7 +3,7 @@
 Summary:	Charset Informations for MIME
 Name:		perl-%{modname}
 Version:	1.013.1
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/MIME::Charset
