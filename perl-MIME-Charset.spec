@@ -9,6 +9,7 @@ Group:		Development/Perl
 Url:		https://metacpan.org/pod/MIME::Charset
 Source0:	http://www.cpan.org/modules/by-module/MIME/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(CPAN)
 BuildRequires:	perl(Test)
